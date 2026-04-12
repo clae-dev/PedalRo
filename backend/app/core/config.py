@@ -7,8 +7,8 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     API_V1_PREFIX: str = "/api/v1"
 
-    # Database
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:password@localhost:5432/pedalro"
+    # Database (Supabase 또는 로컬 Docker)
+    DATABASE_URL: str = ""
 
     # External APIs
     ANTHROPIC_API_KEY: str = ""

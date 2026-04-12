@@ -1,6 +1,7 @@
 services:
   db:
     image: postgis/postgis:16-3.4
+    profiles: [local]
     environment:
       POSTGRES_DB: pedalro
       POSTGRES_USER: postgres
@@ -16,8 +17,6 @@ services:
       - "8000:8000"
     env_file:
       - ./backend/.env
-    depends_on:
-      - db
 
   frontend:
     build: ./frontend
